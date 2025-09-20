@@ -1,62 +1,111 @@
-:root {
-  --max-w: 1040px;
-  --pad: 1.25rem;
-  --gap: 1rem;
+/* Typography & colors (swap font if your original used another family) */
+:root{
+  --text: #111;
+  --muted: #6b6b6b;
+  --border: #eaeaea;
+  --pad: 20px;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0,0,0,.08);
-  --brand: #111;
-  --muted: #5b5b5b;
+  --max: 1120px;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color: var(--brand);
+  font-family: 'Overpass', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
   background: #fff;
+  line-height: 1.5;
 }
-a { color: inherit; text-decoration: none; }
-.container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
 
-.site-header {
+img{ max-width: 80%; display: block; }
+a{ color: inherit; text-decoration: none; }
+
+.container{ max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+/* Header (clean left brand, right nav, like your old site) */
+.site-header{
   position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.8);
   backdrop-filter: blur(8px);
-  background: rgba(255,255,255,.7);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border);
+}
+.header-inner{
   display: flex; align-items: center; justify-content: space-between;
-  padding: .8rem var(--pad);
+  height: 72px;
 }
-.site-header nav a { margin-left: 1rem; opacity: .8; }
-.site-header nav a:hover { opacity: 1; }
-.logo { font-weight: 700; letter-spacing: .2px; }
+.brand{
+  font-weight: 700;
+  letter-spacing: .18rem;
+}
+.nav a{ margin-left: 1.5rem; font-weight: 600; }
+.nav a:hover{ opacity: .8; }
 
-.hero {
-  min-height: 90vh; display: grid; place-items: center;
-  text-align: center; padding: 6rem var(--pad);
+/* Hero split like your original (image left, copy right) */
+.hero{ padding: 72px 0; }
+.hero-grid{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  align-items: center;
 }
-.hero h1 { font-size: clamp(32px, 6vw, 56px); margin: 0 0 .6rem; }
-.hero p { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.2rem; }
-.btn {
-  display: inline-block; padding: .8rem 1.1rem; border-radius: 999px;
-  border: 1px solid #111; box-shadow: var(--shadow);
+.hero-copy h1{
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.2px;
+  margin: 0 0 12px;
+  letter-spacing: .01em;
+}
+.sub{
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.quote{
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 24px;
+}
+.quote cite{
+  display: block; margin-top: 6px; font-style: normal; font-size: .85rem; opacity: .8;
 }
 
-.section { padding: 5rem 0; }
-.section h2 { font-size: clamp(24px, 3.5vw, 36px); margin: 0 0 1rem; }
-
-.cards {
-  list-style: none; padding: 0; margin: 1.2rem 0 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--gap);
+/* CTA button styling resembles your old rounded button with subtle shadow */
+.cta{
+  display: inline-block; padding: .9rem 1.25rem; border-radius: 999px;
+  border: 1px solid #111; box-shadow: var(--shadow); background: #fff;
 }
-.card {
-  border: 1px solid #eee; border-radius: var(--radius); padding: 1rem;
+.cta:hover{ transform: translateY(-1px); }
+
+/* Sections */
+.section{ padding: 72px 0; border-top: 1px solid var(--border); }
+.section h2{ margin: 0 0 16px; font-size: clamp(22px, 3vw, 32px); }
+.narrow{ max-width: 720px; }
+
+/* Work grid */
+.work-grid{
+  list-style: none; padding: 0; margin: 24px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;
+}
+.work-grid li{
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 16px;
   box-shadow: var(--shadow); background: #fff;
 }
-.card h3 { margin: 0 0 .25rem; }
-.card p { margin: 0 0 .75rem; color: var(--muted); }
+.work-grid h3{ margin: 0 0 6px; }
+.work-grid p{ margin: 0 0 10px; color: var(--muted); }
+.link{ text-decoration: underline; }
 
-.site-footer {
-  border-top: 1px solid #eee; padding: 1.2rem 0; color: var(--muted);
-  background: #fafafa; margin-top: 2rem;
+/* Footer */
+.site-footer{
+  border-top: 1px solid var(--border);
+  padding: 18px 0; color: var(--muted); background: #fafafa;
+}
+
+/* Simple, tasteful entrance animations (like your original subtle movement) */
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes riseIn { from{opacity:0; transform: translateY(12px)} to{opacity:1; transform:none} }
+.fade-in{ animation: fadeIn .9s ease both; }
+.rise-in{ animation: riseIn 1s cubic-bezier(.2,.7,.2,1) both .1s; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-media{ order: -1; }
 }

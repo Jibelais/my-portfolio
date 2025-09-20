@@ -1,58 +1,87 @@
+import hero from "./assets/hero.jpg";
+
 export default function App() {
   return (
     <>
       <header className="site-header">
-        <a className="logo" href="#home">Jieun Pivarnik</a>
-        <nav>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div className="container header-inner">
+          <a className="brand" href="#top">JIEUN PIVARNIK</a>
+          <nav className="nav">
+            <a href="#about">ABOUT</a>
+            <a href="#work">WORK</a>
+            <a href="#contact">CONTACT</a>
+          </nav>
+        </div>
       </header>
 
-      <main id="home">
-        <section className="hero" aria-labelledby="home-title">
-          <div className="container">
-            <h1 id="home-title">Frontend Developer & Creative Technologist</h1>
-            <p>Building clean, fast sites with React, Vite, and thoughtful UX.</p>
-            <a className="btn" href="#work">See my work</a>
+      <main id="top">
+        <section className="hero">
+          <div className="container hero-grid">
+            <div className="hero-media fade-in">
+              <img src={hero} alt="Maze artwork" />
+            </div>
+            <div className="hero-copy rise-in">
+              <h2>
+                Hello, I’m a software engineer
+                <br />and creative technologist
+                <br />based in Houston, TX.
+              </h2>
+              <p className="sub">
+                Building clean, fast product with
+                <br />
+                React, Vite, and thoughtful UX
+              </p>
+
+              <blockquote className="quote">
+                <p>
+                  "Real obstacles don't take you in circles.
+                  <br />
+                  They can be overcome. Invented ones are
+                  <br />
+                  like a maze."
+                </p>
+                <cite>Barbara Sher</cite>
+              </blockquote>
+
+              <a className="cta" href="#work">See my work</a>
+            </div>
           </div>
         </section>
 
-        <section id="work" className="section" aria-labelledby="work-title">
-          <div className="container">
-            <h2 id="work-title">Selected Work</h2>
-            <ul className="cards">
-              <li className="card">
-                <h3>Daebak Kitty</h3>
-                <p>Breeder site • WordPress + custom code</p>
-                <a href="https://daebakkitty.com" target="_blank">Visit</a>
-              </li>
-              <li className="card">
-                <h3>Cleopatra Nails Katy</h3>
-                <p>Salon site • Wix + custom integrations</p>
-                <a href="https://cleopatranailskaty.com" target="_blank">Visit</a>
-              </li>
-              {/* Add more projects here */}
-            </ul>
-          </div>
-        </section>
-
-        <section id="about" className="section" aria-labelledby="about-title">
-          <div className="container">
-            <h2 id="about-title">About</h2>
+        <section id="about" className="section">
+          <div className="container narrow">
+            <h2>About</h2>
             <p>
-              Entry-level developer with CS background and bootcamp training.
-              I love ship-ready, maintainable code and elegant UI.
+              I’m Jieun, a web developer with a CS background and bootcamp training.
+              I care about maintainable code, elegant interfaces, and efficient delivery.
             </p>
           </div>
         </section>
 
-        <section id="contact" className="section" aria-labelledby="contact-title">
+        <section id="work" className="section">
           <div className="container">
-            <h2 id="contact-title">Contact</h2>
-            <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p><a href="https://github.com/jibelais" target="_blank">github.com/jibelais</a></p>
+            <h2>Work</h2>
+            <ul className="work-grid">
+              <li>
+                <h3>Daebak Kitty</h3>
+                <p>Breeder site • WordPress + custom code</p>
+                <a href="https://daebakkitty.com" target="_blank" rel="noreferrer">Visit</a>
+              </li>
+              <li>
+                <h3>Cleopatra Nails Katy</h3>
+                <p>Salon site • Wix + custom integrations</p>
+                <a href="https://cleopatranailskaty.com" target="_blank" rel="noreferrer">Visit</a>
+              </li>
+              {/* Add more items as needed */}
+            </ul>
+          </div>
+        </section>
+
+        <section id="contact" className="section">
+          <div className="container narrow">
+            <h2>Contact</h2>
+            <p><a className="link" href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p><a className="link" href="https://github.com/jibelais" target="_blank" rel="noreferrer">github.com/jibelais</a></p>
           </div>
         </section>
       </main>
