@@ -27,9 +27,9 @@ export default function App() {
                 <br />based in Houston, TX.
               </h2>
               <p className="sub">
-                Building clean, fast product with
+                I care about maintainable code,
                 <br />
-                React, Vite, and thoughtful UX
+                elegant interfaces, and efficient delivery.
               </p>
 
               <blockquote className="quote">
