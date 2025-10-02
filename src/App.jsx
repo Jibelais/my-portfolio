@@ -7,7 +7,6 @@ export default function App() {
         <div className="container header-inner">
           <a className="brand" href="#top">JIEUN PIVARNIK</a>
           <nav className="nav">
-            <a href="#about">ABOUT</a>
             <a href="#work">WORK</a>
             <a href="#contact">CONTACT</a>
           </nav>
@@ -48,16 +47,6 @@ export default function App() {
           </div>
         </section>
 
-        <section id="about" className="section">
-          <div className="container narrow">
-            <h2>About</h2>
-            <p>
-              I’m Jieun, a web developer with a CS background and bootcamp training.
-              I care about maintainable code, elegant interfaces, and efficient delivery.
-            </p>
-          </div>
-        </section>
-
         <section id="work" className="section">
           <div className="container">
             <h2>Work</h2>
@@ -72,6 +61,19 @@ export default function App() {
                 <p>Salon site • Wix + custom integrations</p>
                 <a href="https://cleopatranailskaty.com" target="_blank" rel="noreferrer">Visit</a>
               </li>
+              <li>
+                <h3>Mochi’s Mittens</h3>
+                <p>Playful mini app • UI/JS practice</p>
+                 <a href="https://mochis-mittens.netlify.app" target="_blank" rel="noreferrer">Live Demo</a> |{" "}
+                 <a href="https://github.com/Jibelais/mochis-mittens-frontend" target="_blank" rel="noreferrer">GitHub</a>
+              </li>
+               <li>
+                <h3>Less is Greener</h3>
+                <p>Green habits / sustainability app • Frontend project</p>
+                <a href="https://less-is-greener.netlify.app" target="_blank" rel="noreferrer">Live Demo</a> |{" "}
+                <a href="https://github.com/Jibelais/Less-is-Greener-frontend" target="_blank" rel="noreferrer">GitHub</a>
+              </li>
+              
               {/* Add more items as needed */}
             </ul>
           </div>
