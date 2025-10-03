@@ -104,6 +104,23 @@ a{ color: inherit; text-decoration: none; }
 .work-grid li a + a {
   margin-left: 8px; /* space between Live Demo | GitHub */
 }
+.social-links {
+  display: flex;
+  /*justify-content: center; /* center horizontally */
+  gap: 10px; /* space between icons */
+  margin-top: 16px;
+}
+
+.social-links img {
+  width: 50px;   /* adjust to your liking */
+  height: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
 /* Footer */
 .site-footer{
   border-top: 1px solid var(--border);
