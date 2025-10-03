@@ -83,7 +83,7 @@ export default function App() {
           <div className="container">
             <h2>Contact</h2>
             <p><a className="link" href="https://www.linkedin.com/in/jieun-pivarnik/">LinkedIn</a></p>
-            <p><a className="link" href="https://github.com/jibelais" target="_blank" rel="noreferrer">github.com/jibelais</a></p>
+            <p><a className="link" href="https://github.com/jibelais" target="_blank" rel="noreferrer">Github</a></p>
           </div>
         </section>
       </main>
