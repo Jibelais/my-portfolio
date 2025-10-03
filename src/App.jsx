@@ -80,9 +80,9 @@ export default function App() {
         </section>
 
         <section id="contact" className="section">
-          <div className="container narrow">
+          <div className="container">
             <h2>Contact</h2>
-            <p><a className="link" href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p><a className="link" href="https://www.linkedin.com/in/jieun-pivarnik/">LinkedIn</a></p>
             <p><a className="link" href="https://github.com/jibelais" target="_blank" rel="noreferrer">github.com/jibelais</a></p>
           </div>
         </section>
